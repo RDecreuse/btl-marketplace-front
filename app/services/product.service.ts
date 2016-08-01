@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {FORM_DIRECTIVES} from '@angular/common';
+import { Injectable } from '@angular/core';
+import {Product} from "../model/product";
 
 const PRODUCTS: Product[] = [
   { id: 11, name: 'Mr. Nice', comment:'test1' },
@@ -15,25 +15,9 @@ const PRODUCTS: Product[] = [
 ];
 
 
-@Component({
-  selector: 'home',
-  directives: [
-    ...FORM_DIRECTIVES
-  ],
-  pipes: [],
-  styles: [require('./product_list.component.css')],
-  template: require('./product_list.component.html')
-})
-export default class ProductListComponent {
-  public products = PRODUCTS;
-
-  constructor() {
+@Injectable()
+export class ProductService {
+  getProducts(){
+    return Promise.resolve(PRODUCTS);
   }
-
-}
-
-export class Product {
-  id: number;
-  name: string;
-  comment: string;
 }

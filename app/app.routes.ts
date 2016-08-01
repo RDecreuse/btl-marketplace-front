@@ -1,7 +1,7 @@
 import {provideRouter, RouterConfig} from '@angular/router';
 import {Home} from './home';
 import {About} from './about';
-import {ProductList} from "./product_list";
+import {ProductList} from "./product-list";
 
 export const routes: RouterConfig = [
   {path: '', component: Home},
