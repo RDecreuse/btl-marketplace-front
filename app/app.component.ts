@@ -31,14 +31,9 @@ import {NavBarComponent} from './navbar.component';
     <main>
       <router-outlet></router-outlet>
     </main>
-    <footer>
-      Brunch for Angular 2 by <a [href]="url">Colin Bate</a>
-    </footer>
   `
 })
 export class AppComponent {
-  name: string = 'Brunch for Angular 2';
-  url: string = 'http://colin.is/blog';
   constructor() {
 
   }
