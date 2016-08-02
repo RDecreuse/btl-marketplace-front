@@ -6,14 +6,21 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ProductService {
 
-  private heroesUrl = '/api/products';
+  private productUrl = '/api/products';
 
   constructor(private http: Http) {
 
   }
 
-  getProducts(){
-    return this.http.get(this.heroesUrl) // return a  RxJS Observable
+  getProduct(id:number) : Promise {
+    return this.http.get(this.productUrl + '/'+id) // return a  RxJS Observable
+      .toPromise()
+      .then(response => response.json() as Product)
+      .catch(this.handleError);
+  }
+
+  getProducts() : Promise {
+    return this.http.get(this.productUrl) // return a  RxJS Observable
       .toPromise()
       .then(response => response.json() as Product[])
       .catch(this.handleError);

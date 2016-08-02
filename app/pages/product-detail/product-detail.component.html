@@ -1,0 +1,41 @@
+<div *ngIf="product">
+    <div class="panel panel-default">
+        <div class="panel-heading">Product : {{product.name}}</div>
+        <div class="panel-body margin-left">
+            <div class="row">
+                <span>Id : {{product.id}}</span>
+            </div>
+            <div class="row">
+                <span>Name : {{product.name}}</span>
+            </div>
+            <div class="row">
+                <span>Comment : {{product.comment}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Offers</div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                <tr class="theadcustomcss">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Comment</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let offer of product.offers">
+                    <td>{{offer.id}}</td>
+                    <td>{{offer.name}}</td>
+                    <td>{{offer.comment}}</td>
+                    <td>{{offer.price}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

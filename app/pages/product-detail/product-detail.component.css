@@ -4,21 +4,20 @@
  * Look at `encapsulation` if you want to change that.
  */
 pre {
-  border: 1px solid #666;
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 1em;
+    border: 1px solid #666;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.margin-left {
+    margin-left: 10px;
 }
 
 table tbody tr:hover {
-  background-color: #4df7af;
+    background-color: #00a6dd;
 }
-
-table tbody tr:hover {
-  cursor: pointer;
-}
-
 
 .theadcustomcss {
-  color: #3dbf87;
+    color: #006080;
 }

@@ -2,14 +2,14 @@
     <div>Products :</div>
     <table class="table">
         <thead>
-            <tr>
+            <tr class="theadcustomcss">
                 <th>#</th>
                 <th>Name</th>
                 <th>Comment</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of products">
+            <tr *ngFor="let product of products" (click)="gotoDetail(product)">
                 <td>{{product.id}}</td>
                 <td>{{product.name}}</td>
                 <td>{{product.comment}}</td>

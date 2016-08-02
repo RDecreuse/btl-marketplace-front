@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FORM_DIRECTIVES} from '@angular/common';
 import {Product} from "../../model/product";
 import {ProductService} from '../../services/product.service';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'product-list',
@@ -16,7 +18,7 @@ import {ProductService} from '../../services/product.service';
 export default class ProductListComponent implements OnInit {
   public products:Product[];
 
-  constructor(private productService:ProductService) {
+  constructor(private productService:ProductService,   private router: Router) {
   }
 
   getProducts() {
@@ -25,5 +27,10 @@ export default class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+  }
+
+  gotoDetail(product: Product) {
+    let link = ['/products', product.id];
+    this.router.navigate(link);
   }
 }
