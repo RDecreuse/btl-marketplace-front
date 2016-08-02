@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FORM_DIRECTIVES} from '@angular/common';
-import {Product} from "../model/product";
-import {ProductService} from '../services/product.service';
+import {Product} from "../../model/product";
+import {ProductService} from '../../services/product.service';
 
 @Component({
   selector: 'product-list',
