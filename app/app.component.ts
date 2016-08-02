@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {NavBarComponent} from './navbar.component';
+import {NavBarComponent} from './directives/navbar.component';
 
 /*
  * App Component
@@ -25,7 +25,7 @@ import {NavBarComponent} from './navbar.component';
   `],
   template: `
     <header>
-      <h1>Hello {{ name }}</h1>
+      <h1>BTL Marketplace</h1>
     </header>
     <navbar></navbar>
     <main>

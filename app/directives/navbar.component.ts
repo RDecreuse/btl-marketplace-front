@@ -36,6 +36,9 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
           <a [routerLink]="['']" [class.active]="isActive('/')">Home</a>
         </li>
         <li>
+          <a [routerLink]="['products']" [class.active]="isActive('/products')">Products</a>
+        </li>
+        <li>
           <a [routerLink]="['about']" [class.active]="isActive('/about')">About</a>
         </li>
       </ul>

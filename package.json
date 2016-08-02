@@ -35,11 +35,14 @@
     "@angular/platform-browser": "2.0.0-rc.3",
     "@angular/platform-browser-dynamic": "2.0.0-rc.3",
     "@angular/router": "3.0.0-alpha.8",
+    "coffee-script-brunch": "^2.0.0",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "^0.6.12"
+    "zone.js": "^0.6.12",
+    "express": "latest",
+    "http-proxy": "latest"
   },
   "devDependencies": {
     "auto-reload-brunch": "2.7.1",
