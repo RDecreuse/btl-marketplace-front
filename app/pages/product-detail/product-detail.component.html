@@ -1,6 +1,6 @@
 <div *ngIf="product">
     <div class="panel panel-default">
-        <div class="panel-heading">Product : {{product.name}}</div>
+        <div class="panel-heading">Product : {{product.name | uppercase}}</div>
         <div class="panel-body margin-left">
             <div class="row">
                 <span>Id : {{product.id}}</span>
